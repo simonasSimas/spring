@@ -9,11 +9,11 @@ import java.util.List;
 @Service
 public class CompanyService {
 
-    @Autowired
-    private MockService mockService;
+    private final MockService mockService;
 
-    public CompanyService(){
+    public CompanyService(MockService mockService){
         System.out.println("CompanyService");
+        this.mockService = mockService;
     }
 
     public List<Company> getAll() {

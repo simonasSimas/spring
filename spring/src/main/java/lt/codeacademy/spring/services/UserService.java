@@ -9,14 +9,15 @@ import java.util.List;
 @Service
 public class UserService {
 
-    @Autowired
-    private MockService mockService;
+    private final MockService mockService;
 
-    public UserService(){
+    public UserService(MockService mockService){
         System.out.println("UserService");
+        this.mockService = mockService;
     }
 
     public List<User> getAll() {
+
         return mockService.getUsers();
     }
 }

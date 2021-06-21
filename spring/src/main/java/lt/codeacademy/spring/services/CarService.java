@@ -11,7 +11,6 @@ import java.util.List;
 @Service
 public class CarService {
 
-    @Autowired
     private final MockService mockService;
 
     private final DateUtil dateUtil;
